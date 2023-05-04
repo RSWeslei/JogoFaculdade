@@ -6,29 +6,33 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
-    private PlayerInputs _playerInput;
-    public Vector2 MovementInput { get; private set; }
+    public PlayerInputs PlayerInput { get; private set; }
+    public Action<Vector2> OnMovement;
     void Awake()
     {
-        _playerInput = new PlayerInputs();
+        PlayerInput = new PlayerInputs();
     }
     
     private void HandleMovement()
     {
-        _playerInput.Player.Movement.performed += ctx =>
+        PlayerInput.Player.Movement.performed += ctx =>
         {
-            MovementInput = ctx.ReadValue<Vector2>();
+            OnMovement?.Invoke(ctx.ReadValue<Vector2>());
+        };
+        PlayerInput.Player.Movement.canceled += ctx =>
+        {
+            OnMovement?.Invoke(ctx.ReadValue<Vector2>());
         };
     }
 
     private void OnEnable()
     {
-        _playerInput.Player.Enable();
+        PlayerInput.Player.Enable();
         HandleMovement();
     }
     
     private void OnDisable()
     {
-        _playerInput.Player.Disable();
+        PlayerInput.Player.Disable();
     }
 }
