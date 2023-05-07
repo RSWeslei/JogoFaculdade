@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &99722545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 99722548}
+  - component: {fileID: 99722547}
+  - component: {fileID: 99722546}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &99722546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99722545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &99722547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99722545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &99722548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99722545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191778379
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +636,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &670267633 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+  m_PrefabInstance: {fileID: 6767288060500923920}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1073253171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073253175}
+  - component: {fileID: 1073253174}
+  - component: {fileID: 1073253173}
+  - component: {fileID: 1073253172}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1073253172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073253171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1073253173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073253171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1073253174
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073253171}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1073253175
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073253171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 670267633}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1239552731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,3 +1604,396 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6767288060500923920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1073253175}
+    m_Modifications:
+    - target: {fileID: 6767288060000677600, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_Name
+      value: SliderPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677601, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[9]
+      value: 
+      objectReference: {fileID: -1114514554, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[10]
+      value: 
+      objectReference: {fileID: 1071860438, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[11]
+      value: 
+      objectReference: {fileID: 1091492339, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[12]
+      value: 
+      objectReference: {fileID: -1198272983, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[13]
+      value: 
+      objectReference: {fileID: 1360818211, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[14]
+      value: 
+      objectReference: {fileID: 760029344, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[15]
+      value: 
+      objectReference: {fileID: 662823514, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[16]
+      value: 
+      objectReference: {fileID: -2005752418, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[17]
+      value: 
+      objectReference: {fileID: 87858024, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[18]
+      value: 
+      objectReference: {fileID: -629235134, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[19]
+      value: 
+      objectReference: {fileID: 1801311427, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[20]
+      value: 
+      objectReference: {fileID: -823589803, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[21]
+      value: 
+      objectReference: {fileID: -1184475473, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[22]
+      value: 
+      objectReference: {fileID: -1141267062, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[23]
+      value: 
+      objectReference: {fileID: -2104275057, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[24]
+      value: 
+      objectReference: {fileID: -807920276, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[25]
+      value: 
+      objectReference: {fileID: 1641927517, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[26]
+      value: 
+      objectReference: {fileID: -1729569660, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[27]
+      value: 
+      objectReference: {fileID: -873664872, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[28]
+      value: 
+      objectReference: {fileID: -1344778359, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[29]
+      value: 
+      objectReference: {fileID: 167483571, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[30]
+      value: 
+      objectReference: {fileID: -1658150143, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[31]
+      value: 
+      objectReference: {fileID: 2045334882, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[32]
+      value: 
+      objectReference: {fileID: 1648523976, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[33]
+      value: 
+      objectReference: {fileID: -153598054, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[34]
+      value: 
+      objectReference: {fileID: -1147856812, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[35]
+      value: 
+      objectReference: {fileID: -1973858212, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[36]
+      value: 
+      objectReference: {fileID: 477856667, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[37]
+      value: 
+      objectReference: {fileID: 1562966858, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[38]
+      value: 
+      objectReference: {fileID: 1570647752, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[39]
+      value: 
+      objectReference: {fileID: 1317485786, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[40]
+      value: 
+      objectReference: {fileID: -1415137659, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[41]
+      value: 
+      objectReference: {fileID: -1445090008, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[42]
+      value: 
+      objectReference: {fileID: 1543178585, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[43]
+      value: 
+      objectReference: {fileID: 2064529080, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[44]
+      value: 
+      objectReference: {fileID: -15173231, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[45]
+      value: 
+      objectReference: {fileID: 93960048, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[46]
+      value: 
+      objectReference: {fileID: 124429858, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[47]
+      value: 
+      objectReference: {fileID: -213112313, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[48]
+      value: 
+      objectReference: {fileID: -1370401653, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[49]
+      value: 
+      objectReference: {fileID: -1190828564, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[50]
+      value: 
+      objectReference: {fileID: 2141244201, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[51]
+      value: 
+      objectReference: {fileID: -1512297756, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[52]
+      value: 
+      objectReference: {fileID: -1406057647, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[53]
+      value: 
+      objectReference: {fileID: -1459362789, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[54]
+      value: 
+      objectReference: {fileID: 1986549159, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[55]
+      value: 
+      objectReference: {fileID: -2085212484, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[56]
+      value: 
+      objectReference: {fileID: 1063759709, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[57]
+      value: 
+      objectReference: {fileID: -450822356, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[58]
+      value: 
+      objectReference: {fileID: -665570542, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[59]
+      value: 
+      objectReference: {fileID: -767046807, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[60]
+      value: 
+      objectReference: {fileID: 1736073904, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[61]
+      value: 
+      objectReference: {fileID: 1533063848, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[62]
+      value: 
+      objectReference: {fileID: 1614644254, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[63]
+      value: 
+      objectReference: {fileID: 68939705, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[64]
+      value: 
+      objectReference: {fileID: 356797140, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[65]
+      value: 
+      objectReference: {fileID: -1261353354, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[66]
+      value: 
+      objectReference: {fileID: -1452893862, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[67]
+      value: 
+      objectReference: {fileID: 1764244098, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[68]
+      value: 
+      objectReference: {fileID: 184013171, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[69]
+      value: 
+      objectReference: {fileID: 499154372, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[70]
+      value: 
+      objectReference: {fileID: -1564447659, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[71]
+      value: 
+      objectReference: {fileID: -55289367, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[72]
+      value: 
+      objectReference: {fileID: 1078775720, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[73]
+      value: 
+      objectReference: {fileID: 1632443099, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[74]
+      value: 
+      objectReference: {fileID: 168404367, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[75]
+      value: 
+      objectReference: {fileID: 303570703, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[76]
+      value: 
+      objectReference: {fileID: -726684757, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[77]
+      value: 
+      objectReference: {fileID: -348702599, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[78]
+      value: 
+      objectReference: {fileID: 656162648, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[79]
+      value: 
+      objectReference: {fileID: -1414991079, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    - target: {fileID: 6767288060000677602, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
+      propertyPath: puzzleSprites.Array.data[80]
+      value: 
+      objectReference: {fileID: 1242284606, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d9299a686f79fb64f88dda2ea5b3aed2, type: 3}
