@@ -122,6 +122,8 @@ public class SliderPuzzle : MonoBehaviour
       }
       
       Debug.Log("You win!");
+      emptyTile.gameObject.SetActive(true);
+      isMoving = true;
    }
 
    IEnumerator MoveCoroutine(Tile tile, Vector2 emptyPos)
