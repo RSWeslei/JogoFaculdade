@@ -122,8 +122,7 @@ public class SliderPuzzle : MonoBehaviour
       }
       
       Debug.Log("You win!");
-      emptyTile.gameObject.SetActive(true);
-      isMoving = true;
+      StartCoroutine(WaitGameFinish(emptyTile.gameObject));
    }
 
    IEnumerator MoveCoroutine(Tile tile, Vector2 emptyPos)
@@ -142,5 +141,15 @@ public class SliderPuzzle : MonoBehaviour
 
       isMoving = false;
    }
-
+   
+   IEnumerator WaitGameFinish(GameObject obj)
+   {
+      yield return new WaitForSeconds(moveDuration);
+      obj.SetActive(true);
+      foreach (var prefab in tileList)
+      {
+         prefab.GetComponent<Button>().enabled = false;
+      }
+      Destroy(this);
+   }
 }

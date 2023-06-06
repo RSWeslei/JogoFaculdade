@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 816622207b78f474fb3e5bcff4f4cdbd
-      internalID: -823634685
+      spriteID: 5c84bbc7241a6054c992c8fa241ddd6c
+      internalID: 1136949629
       vertices: []
       indices: 
       edges: []
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a44160ebadebfff4fa8e831aa7ba5923
-      internalID: 1412259921
+      spriteID: d8aed6331edb8744d9b59939cf42d6c0
+      internalID: -883267123
       vertices: []
       indices: 
       edges: []
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fee43bb507bcfbe4aac7c85d2617fdef
-      internalID: 1073138715
+      spriteID: 6f440e8d8706b90479b8bfe19514d39d
+      internalID: -431679268
       vertices: []
       indices: 
       edges: []
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a67109bc67f4b940a50d32e814593b4
-      internalID: 626749372
+      spriteID: 0acb8e0584c0a424e8de2a4540d6c68f
+      internalID: 2026842634
       vertices: []
       indices: 
       edges: []
@@ -287,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc896a2d7eb58d14896524714982e2be
-      internalID: 1429197576
+      spriteID: 6bc2df6bee49243469ae58036916a15d
+      internalID: -2092243240
       vertices: []
       indices: 
       edges: []
@@ -308,11 +308,11 @@ TextureImporter:
       Pixel_Art_Portrait_001-original_1: -119092005
       Pixel_Art_Portrait_001-original_2: 341979671
       Pixel_Art_Portrait_001-original_3: -1046827025
-      Pixel_Art_Portrait_001-original_4: -823634685
-      Pixel_Art_Portrait_001-original_5: 1412259921
-      Pixel_Art_Portrait_001-original_6: 1073138715
-      Pixel_Art_Portrait_001-original_7: 626749372
-      Pixel_Art_Portrait_001-original_8: 1429197576
+      Pixel_Art_Portrait_001-original_4: 1136949629
+      Pixel_Art_Portrait_001-original_5: -883267123
+      Pixel_Art_Portrait_001-original_6: -431679268
+      Pixel_Art_Portrait_001-original_7: 2026842634
+      Pixel_Art_Portrait_001-original_8: -2092243240
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
