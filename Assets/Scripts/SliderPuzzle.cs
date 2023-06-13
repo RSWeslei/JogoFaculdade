@@ -12,7 +12,7 @@ public class SliderPuzzle : MonoBehaviour
    [SerializeField] private List<Sprite> puzzleSprites;
    
    private float backgroundSize;
-   private List<Tile> tileList = new List<Tile>();
+   [SerializeField] private List<Tile> tileList = new List<Tile>();
    private Tile emptyTile;
    private bool isMoving;
 
@@ -59,7 +59,8 @@ public class SliderPuzzle : MonoBehaviour
          }
       }
 
-      int emptyTileIndex = Random.Range(0, puzzleSize);
+      // int emptyTileIndex = Random.Range(0, puzzleSize);
+      int emptyTileIndex = 8;
       tileList[emptyTileIndex].gameObject.SetActive(false);
       emptyTile = tileList[emptyTileIndex];
    }
@@ -89,11 +90,18 @@ public class SliderPuzzle : MonoBehaviour
    private void ShuffleList(List<int> list)
    {
       int n = list.Count;
-      while (n > 1)
+      int[] numbers = new[] { 4, 7, 3, 6, 5, 2, 0, 1, 8 };
+      // while (n > 1)
+      // {
+      //    // n--;
+      //    // int k = Random.Range(0, n + 1);
+      //    // (list[k], list[n]) = (list[n], list[k]);
+      //    list[n] = numbers[n];
+      // }
+
+      for (int i = 0; i < n; i++)
       {
-         n--;
-         int k = Random.Range(0, n + 1);
-         (list[k], list[n]) = (list[n], list[k]);
+         list[i] = numbers[i];
       }
    }
    
