@@ -13,7 +13,7 @@ public class CameraDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (cameraManager.CurrentPosition == cameraPositionID) {
+            if (cameraManager.currentPosition == cameraPositionID) {
                 return;
             }
             Debug.Log(cameraPositionID);

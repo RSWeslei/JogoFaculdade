@@ -10,9 +10,9 @@ public class SliderPuzzle : MonoBehaviour
    [SerializeField] private GameObject tilePrefab;
    [SerializeField] private float moveDuration = 0.3f;
    [SerializeField] private List<Sprite> puzzleSprites;
-   
-   private float backgroundSize;
    [SerializeField] private List<Tile> tileList = new List<Tile>();
+   [SerializeField] private int[] puzzleArray = new int[] { 4, 7, 3, 6, 5, 2, 0, 1, 8 };
+   private float backgroundSize;
    private Tile emptyTile;
    private bool isMoving;
 
@@ -90,7 +90,6 @@ public class SliderPuzzle : MonoBehaviour
    private void ShuffleList(List<int> list)
    {
       int n = list.Count;
-      int[] numbers = new[] { 4, 7, 3, 6, 5, 2, 0, 1, 8 };
       // while (n > 1)
       // {
       //    // n--;
@@ -101,7 +100,7 @@ public class SliderPuzzle : MonoBehaviour
 
       for (int i = 0; i < n; i++)
       {
-         list[i] = numbers[i];
+         list[i] = puzzleArray[i];
       }
    }
    
