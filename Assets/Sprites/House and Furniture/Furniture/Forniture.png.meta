@@ -7185,10 +7185,10 @@ TextureImporter:
       name: Forniture_337
       rect:
         serializedVersion: 2
-        x: 136
-        y: 119
-        width: 31
-        height: 16
+        x: 135
+        y: 118
+        width: 33
+        height: 18
       alignment: 9
       pivot: {x: 0.48387095, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
