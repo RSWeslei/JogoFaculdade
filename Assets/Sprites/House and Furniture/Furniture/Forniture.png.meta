@@ -4354,8 +4354,8 @@ TextureImporter:
         y: 204
         width: 61
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4918033, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5614,8 +5614,8 @@ TextureImporter:
         y: 170
         width: 13
         height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.46666667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7185,10 +7185,10 @@ TextureImporter:
       name: Forniture_337
       rect:
         serializedVersion: 2
-        x: 135
-        y: 118
-        width: 33
-        height: 18
+        x: 136
+        y: 119
+        width: 31
+        height: 16
       alignment: 9
       pivot: {x: 0.48387095, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
