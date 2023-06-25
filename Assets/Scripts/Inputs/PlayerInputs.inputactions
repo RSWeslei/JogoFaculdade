@@ -92,6 +92,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "a3994a76-7f89-4caf-b755-a71fa67daa3b",
+            "actions": [
+                {
+                    "name": "WaitInput",
+                    "type": "Button",
+                    "id": "ecae77be-6676-4fc3-ad68-dd8973b258b8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f00987e7-fe47-4ec6-b63e-a40f4ad0864e",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WaitInput",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

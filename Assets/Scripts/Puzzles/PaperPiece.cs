@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperPiece : MonoBehaviour, IInteractable
+public class PaperPiece : InteractableObject
 {
     [Header("Paper Piece")]
     [SerializeField] public int number;
@@ -12,9 +12,14 @@ public class PaperPiece : MonoBehaviour, IInteractable
     [SerializeField] private bool collected = false;
     
     public Action<PaperPiece> OnInteract;
-    public void Interact()
+    
+    public override void Interact()
     {
-        if (collected) return;
+        if (collected)
+        {
+            UIManager.Instance.SetDialogMessage("Não há mais nada aqui.");
+            return;
+        }
         collected = true;
         OnInteract?.Invoke(this);
     }

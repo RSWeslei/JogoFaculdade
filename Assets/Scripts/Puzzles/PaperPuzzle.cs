@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PaperPuzzle : Puzzle
 {
@@ -10,6 +12,7 @@ public class PaperPuzzle : Puzzle
     [SerializeField] private int[] code;
     [SerializeField] private Sprite puzzleSprite;
     [SerializeField] private Sprite[] piecesSprites;
+    [SerializeField] private PlayerInputManager playerInputManager;
     private int collectedPieces = 0;
     
     [Header("UI")]
@@ -20,7 +23,15 @@ public class PaperPuzzle : Puzzle
     {
         GeneratePuzzle();
     }
-    
+
+    private void Awake()
+    {
+        playerInputManager.OnAnyKey += () =>
+        {
+            UIManager.Instance.ToogleUIElement(paperPieceUI, false);
+        };
+    }
+
     private void GeneratePuzzle ()
     {
         int objectsCount = objects.childCount;
@@ -48,6 +59,7 @@ public class PaperPuzzle : Puzzle
         {
             GameObject obj = objects.GetChild(randomPositions[i]).gameObject;
             PaperPiece paperPiece = obj.gameObject.AddComponent(typeof(PaperPiece)) as PaperPiece;
+            Destroy(obj.GetComponent<InteractableObject>());
             if (paperPiece == null) continue;
             paperPiece.number = code[i];
             paperPiece.position = i;
@@ -59,13 +71,19 @@ public class PaperPuzzle : Puzzle
 
     private void CollectPaper(PaperPiece paperPiece)
     {
+        UIManager.Instance.SetDialogMessage("Peguei um pedaço de papel.");
         paperPieceUI.gameObject.SetActive(true);
         pieces[paperPiece.position].gameObject.SetActive(true);
         collectedPieces++;
         
         if (collectedPieces == numberOfPieces)
         {
-            Debug.Log("Puzzle resolvido");
+            ResolvePuzzle();
         }
+    }
+    
+    private void ResolvePuzzle()
+    {
+        UIManager.Instance.SetDialogMessage("Com essa senha eu consigo abrir a porta.");
     }
 }
