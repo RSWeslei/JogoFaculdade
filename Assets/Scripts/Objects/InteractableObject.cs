@@ -16,9 +16,24 @@ public class InteractableObject : MonoBehaviour, IInteractable
     private void Update()
     {
         if (Player.Instance == null) return;
-        float distance = Vector3.Distance(transform.position, playerInstance.transform.position);   
+        if (Player.Instance.hittingObject == null) return;
+        float distance = Vector3.Distance(Player.Instance.hittingObject.transform.position, playerInstance.transform.position);   
         
-        shading.enabled = distance <= proximityDistance;      
+        // shading.enabled = distance <= proximityDistance;
+        if (distance <= proximityDistance)
+        {
+            if (Player.Instance.hittingObject != null)
+            {
+                Player.Instance.hittingObject.GetComponent<Shading>().enabled = false;
+            }
+            shading.enabled = true;
+            Player.Instance.hittingObject = transform;
+        }
+        else if (distance > proximityDistance)
+        {
+            shading.enabled = false;
+            Player.Instance.hittingObject = null;
+        }
     }
 
     public virtual void Interact()

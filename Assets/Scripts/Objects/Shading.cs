@@ -20,6 +20,7 @@ public class Shading : MonoBehaviour
         float t = Mathf.PingPong(Time.time / duration, 1f);
         float alpha = Mathf.Lerp(minAlpha, maxAlpha, t);
         Color newColor = spriteRenderer.color;
+        newColor = Color.red;
         newColor.a = alpha;
         spriteRenderer.color = newColor;
     }
@@ -27,6 +28,7 @@ public class Shading : MonoBehaviour
     private void OnDisable()
     {
         Color newColor = spriteRenderer.color;
+        newColor = Color.white;
         newColor.a = maxAlpha;
         spriteRenderer.color = newColor;
     }
