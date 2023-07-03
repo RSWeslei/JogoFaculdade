@@ -14,7 +14,8 @@ public class SoundManager : MonoBehaviour
         Interact,
         Typing,
         OpenDoor,
-        Paper
+        Paper,
+        SliderPuzzle
     }
 
     private void Awake()

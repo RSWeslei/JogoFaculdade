@@ -101,6 +101,7 @@ public class SliderPuzzle : MonoBehaviour
    private void MoveTile(Tile tile)
    {
       isMoving = true;
+      SoundManager.Instance.PlaySound(SoundManager.Sound.SliderPuzzle);
       Vector2 tempPos = emptyTile.rectTransform.anchoredPosition;
       Vector2 tileAnchoredPos = tile.rectTransform.anchoredPosition;
       
