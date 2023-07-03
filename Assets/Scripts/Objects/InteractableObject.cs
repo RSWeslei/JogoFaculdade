@@ -4,40 +4,51 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour, IInteractable
 {
-    [SerializeField] private float proximityDistance = 4f;
-    private Shading shading;
-    private Player playerInstance;
-    private void Start()
+    [HideInInspector] public Shading shading;
+    [TextArea(3, 10)]
+    [SerializeField] private string message;
+    private void Awake()
     {
         shading = GetComponent<Shading>();
-        playerInstance = Player.Instance;
     }
-
-    private void Update()
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Player.Instance == null) return;
-        if (Player.Instance.hittingObject == null) return;
-        float distance = Vector3.Distance(Player.Instance.hittingObject.transform.position, playerInstance.transform.position);   
-        
-        // shading.enabled = distance <= proximityDistance;
-        if (distance <= proximityDistance)
+        if (other.CompareTag("Player"))
         {
-            if (Player.Instance.hittingObject != null)
+            Player.Instance.SetHittingObject(transform);
+            if (shading != null)
             {
-                Player.Instance.hittingObject.GetComponent<Shading>().enabled = false;
+                shading.enabled = true;
             }
-            shading.enabled = true;
-            Player.Instance.hittingObject = transform;
         }
-        else if (distance > proximityDistance)
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            shading.enabled = false;
-            Player.Instance.hittingObject = null;
+            Transform hittingObject = Player.Instance.hittingObject;
+            if (hittingObject && hittingObject.CompareTag("Interactable") && hittingObject != transform)
+            {
+                return;
+            }
+            Player.Instance.SetHittingObject(null);
+            if (shading != null)
+            {
+                shading.enabled = false;
+            }
+            PlayerDetector.ToggleDetector();
         }
     }
 
     public virtual void Interact()
     {
-        UIManager.Instance.SetDialogMessage("Não há nada aqui.");
+        UIManager.Instance.SetDialogMessage(message);
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Interact);
+        Player.Instance.SetHittingObject(null);
+        gameObject.layer = 0;
+        Destroy(shading);
+        Destroy(this);
     }
 }

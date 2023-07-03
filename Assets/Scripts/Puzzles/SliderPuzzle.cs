@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SliderPuzzle : MonoBehaviour
 {
+   [SerializeField] private SecondDoor secondDoor;
    [SerializeField] private int puzzleSize;
    [SerializeField] private GameObject tilePrefab;
    [SerializeField] private float moveDuration = 0.3f;
@@ -19,7 +20,7 @@ public class SliderPuzzle : MonoBehaviour
    private void Start()
    {
       backgroundSize = GetComponent<Image>().rectTransform.rect.width;
-      
+      secondDoor = secondDoor as SecondDoor;
       SpawnPuzzle();
    }
    
@@ -90,14 +91,7 @@ public class SliderPuzzle : MonoBehaviour
    private void ShuffleList(List<int> list)
    {
       int n = list.Count;
-      // while (n > 1)
-      // {
-      //    // n--;
-      //    // int k = Random.Range(0, n + 1);
-      //    // (list[k], list[n]) = (list[n], list[k]);
-      //    list[n] = numbers[n];
-      // }
-
+      
       for (int i = 0; i < n; i++)
       {
          list[i] = puzzleArray[i];
@@ -127,9 +121,26 @@ public class SliderPuzzle : MonoBehaviour
             return;
          }
       }
-      
-      Debug.Log("You win!");
+      Win();
+   }
+
+   private void Win()
+   {
+      secondDoor.OpenDoor();
       StartCoroutine(WaitGameFinish(emptyTile.gameObject));
+   }
+   
+   public void GiveUp()
+   {
+      secondDoor.OpenDoor();
+      GameManager.Instance.EnableInputs();
+      gameObject.SetActive(false);
+   }
+
+   public void Close()
+   {
+      GameManager.Instance.EnableInputs();
+      gameObject.SetActive(false);
    }
 
    IEnumerator MoveCoroutine(Tile tile, Vector2 emptyPos)
@@ -152,11 +163,11 @@ public class SliderPuzzle : MonoBehaviour
    IEnumerator WaitGameFinish(GameObject obj)
    {
       yield return new WaitForSeconds(moveDuration);
+      GameManager.Instance.EnableInputs();
       obj.SetActive(true);
       foreach (var prefab in tileList)
       {
          prefab.GetComponent<Button>().enabled = false;
       }
-      Destroy(this);
    }
 }

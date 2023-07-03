@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class PaperPuzzle : Puzzle
+public class PaperPuzzle : MonoBehaviour
 {
     [Header("Puzzle")]
     [SerializeField] private int numberOfPieces = 3;
@@ -13,6 +13,7 @@ public class PaperPuzzle : Puzzle
     [SerializeField] private Sprite puzzleSprite;
     [SerializeField] private Sprite[] piecesSprites;
     [SerializeField] private PlayerInputManager playerInputManager;
+    [SerializeField] private PuzzlesFirstRoom puzzlesFirstRoom;
     private int collectedPieces = 0;
     
     [Header("UI")]
@@ -71,10 +72,10 @@ public class PaperPuzzle : Puzzle
 
     private void CollectPaper(PaperPiece paperPiece)
     {
-        UIManager.Instance.SetDialogMessage("Peguei um pedaço de papel.");
         paperPieceUI.gameObject.SetActive(true);
         pieces[paperPiece.position].gameObject.SetActive(true);
         collectedPieces++;
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Paper);
         
         if (collectedPieces == numberOfPieces)
         {
@@ -84,6 +85,7 @@ public class PaperPuzzle : Puzzle
     
     private void ResolvePuzzle()
     {
-        UIManager.Instance.SetDialogMessage("Com essa senha eu consigo abrir a porta.");
+        UIManager.Instance.SetDialogMessage("Com essa senha eu consigo abrir o cofre.");
+        puzzlesFirstRoom.allPaperCollected = true;
     }
 }

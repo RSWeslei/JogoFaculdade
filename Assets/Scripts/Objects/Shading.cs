@@ -10,7 +10,7 @@ public class Shading : MonoBehaviour
     [SerializeField] private float duration = 2f;
     private SpriteRenderer spriteRenderer;
     
-    private void Start()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

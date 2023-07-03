@@ -7,6 +7,7 @@ using TMPro;
 public class TypeWriterEffect : MonoBehaviour
 {
     [SerializeField] private float delay = 0.05f;
+    [SerializeField] private PlayerInputManager playerInputManager;
     private string currentText;
     private string fullText;
     private TextMeshProUGUI textMeshPro;
@@ -20,19 +21,26 @@ public class TypeWriterEffect : MonoBehaviour
     IEnumerator ShowText()
     {
         isWriting = true;
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Typing);
         for (int i = 0; i < fullText.Length; i++)
         {
             currentText = fullText.Substring(0, i);
             textMeshPro.text = currentText;
             yield return new WaitForSeconds(delay);
         }
+        yield return new WaitForSeconds(0.5f);
+        SoundManager.Instance.StopSound();
         isWriting = false;
         
-        yield return new WaitForSeconds(1f);
         if (fifo.Count > 0)
         {
             UIManager.Instance.SetDialogMessage(fifo[0]);
             fifo.RemoveAt(0);
+            yield break;
+        }
+        if (fifo.Count == 0)
+        {
+            playerInputManager.ToggleWaitInput(true);
         }
     }
 

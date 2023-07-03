@@ -91,14 +91,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleSize: 3
   tilePrefab: {fileID: 4525146739034738940, guid: c9c82fc453b7810468d43521642e127c, type: 3}
+  moveDuration: 0.3
   puzzleSprites:
   - {fileID: 915171749, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
   - {fileID: -119092005, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
   - {fileID: 341979671, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
   - {fileID: -1046827025, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
-  - {fileID: -823634685, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
-  - {fileID: 1412259921, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
-  - {fileID: 1073138715, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
-  - {fileID: 626749372, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
-  - {fileID: 1429197576, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
-  moveDuration: 0.3
+  - {fileID: 1136949629, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+  - {fileID: -883267123, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+  - {fileID: -431679268, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+  - {fileID: 2026842634, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+  - {fileID: -2092243240, guid: 93617e4bc5eb23f4ea1086ec8d1d0d32, type: 3}
+  tileList: []
+  puzzleArray: 040000000700000003000000060000000500000002000000000000000100000008000000

@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
     
     public void SetDialogMessage(string message)
     {
-        GameManager.Instance.WaitForInput();
+        GameManager.Instance.DisableInputs();
         ToggleDialogBox(true);
         typeWriterEffect.SetText(message);
     }

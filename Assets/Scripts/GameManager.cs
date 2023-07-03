@@ -33,13 +33,17 @@ public class GameManager : MonoBehaviour
     private void DisableWaitForInput()
     {
         playerInputManager.ToggleWaitInput(false);
-        playerInputManager.ToggleInputs(true);
+        EnableInputs();
         UIManager.Instance.ToggleDialogBox(false);
     }
     
-    public void WaitForInput()
+    public void DisableInputs()
     {
-        playerInputManager.ToggleWaitInput(true);
         playerInputManager.ToggleInputs(false);
+    }
+    
+    public void EnableInputs()
+    {
+        playerInputManager.ToggleInputs(true);
     }
 }

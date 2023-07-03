@@ -3,34 +3,31 @@ using UnityEngine;
 
 public class PlayerDetector : MonoBehaviour
 {
-    [SerializeField] private float raycastRadius = 1.5f;
-    [SerializeField] private LayerMask layerMask;
     [SerializeField] private PlayerInputManager playerInput;
-    private Transform hittingObject;
-    
+    private static Collider2D[] _colliders;
+
+    private void Start()
+    {
+        _colliders = GetComponents<Collider2D>();
+    }
 
     private void Detect()
     {
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, raycastRadius, Vector2.zero, 0f, layerMask);
-        if (hit)
+        if (Player.Instance.hittingObject != null)
         {
-            Debug.Log(hit.collider.name);
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            IInteractable interactable = Player.Instance.hittingObject.GetComponent<IInteractable>();
             interactable?.Interact();
         }
     }
-
-    // private void Update()
-    // {
-    //     RaycastHit2D hit = Physics2D.CircleCast(transform.position, raycastRadius, Vector2.zero, 0f, layerMask);
-    //     if (hit)
-    //     {
-    //         if (Player.Instance == null) return;
-    //         hittingObject = hit.transform;
-    //         Shading shading = hit.transform.GetComponent<Shading>();
-    //         shading.enabled = true;
-    //     }
-    // }
+    
+    public static void ToggleDetector()
+    {
+        foreach (Collider2D collider in _colliders)
+        {
+            collider.enabled = false;
+            collider.enabled = true;
+        }
+    }
 
     private void OnEnable()
     {

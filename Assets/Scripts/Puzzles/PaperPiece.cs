@@ -17,10 +17,15 @@ public class PaperPiece : InteractableObject
     {
         if (collected)
         {
-            UIManager.Instance.SetDialogMessage("Não há mais nada aqui.");
+            UIManager.Instance.SetDialogMessage("Já peguei esse pedaço de papel.");
             return;
         }
         collected = true;
+        UIManager.Instance.SetDialogMessage("Peguei um pedaço de papel.");
         OnInteract?.Invoke(this);
+        SoundManager.Instance.PlaySound(SoundManager.Sound.Interact);
+        Player.Instance.SetHittingObject(null);
+        gameObject.layer = 0;
+        Destroy(this);
     }
 }
